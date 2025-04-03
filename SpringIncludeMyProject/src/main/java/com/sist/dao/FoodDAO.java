@@ -35,7 +35,7 @@ public class FoodDAO {
 	{
 		return mapper.foodFindData(map);
 	}
-	public FoodVO foodFindTotalPage(Map map)
+	public int foodFindTotalPage(Map map)
 	{
 		return mapper.foodFindTotalPage(map);
 	}

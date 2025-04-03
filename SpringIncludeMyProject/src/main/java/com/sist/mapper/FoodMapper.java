@@ -33,15 +33,15 @@ public interface FoodMapper {
 	@Select("SELECT fno,poster,name,type,price,num "
 			+"FROM (SELECT fno,poster,name,type,price,rownum as num "
 			+"FROM (SELECT /* +INDEX_ASC(food_menupan fm_fno_pk)*/ fno,poster,name,type,price "
-			+"FROM food_menupan WHERE type LIKE '%'||#{fd}||'%' "
+			+"FROM food_menupan WHERE type LIKE '%'||#{fd}||'%')) "
 			+"WHERE num BETWEEN #{start} AND #{end}")
 	public List<FoodVO> foodFindData(Map map);
 	
 	
-	@Select("SELECT * FROM food_menupan "
-			+"WHERE fno=#{fno}"
+	@Select("SELECT CEIL(COUNT(*)/12.0) "
+			+"FROM food_menupan "
 			+"WHERE REGEXP_LIKE(type,#{fd})")
-	public FoodVO foodFindTotalPage(Map map);
+	public int foodFindTotalPage(Map map);
 	
 	
 	/*

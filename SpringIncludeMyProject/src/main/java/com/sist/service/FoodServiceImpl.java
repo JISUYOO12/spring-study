@@ -35,7 +35,7 @@ private FoodDAO dao;
 	}
 
 	@Override
-	public FoodVO foodFindTotalPage(Map map) {
+	public int foodFindTotalPage(Map map) {
 		// TODO Auto-generated method stub
 		return dao.foodFindTotalPage(map);
 	}

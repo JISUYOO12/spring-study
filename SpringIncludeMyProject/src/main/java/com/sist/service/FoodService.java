@@ -14,6 +14,6 @@ public interface FoodService {
 	public int foodTotalPage();
 	public FoodVO foodDetailData(int fno);
 	public List<FoodVO> foodFindData(Map map);
-	public FoodVO foodFindTotalPage(Map map);
+	public int foodFindTotalPage(Map map);
 }
 

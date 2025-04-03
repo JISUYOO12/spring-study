@@ -12,14 +12,8 @@ import com.sist.commons.CommonsPagination;
 import com.sist.service.*;
 
 
-/*
- * 
- * 
- * 	private int fno,hit,score;
-	private String name,type,phone,addrss,theme,poster,images,time,parking,content,price;
- * 
- * */
-/*
+
+
 @Controller
 public class FoodController {
    @Autowired
@@ -60,31 +54,6 @@ public class FoodController {
    }
    
 }
-/*
- *    // request => Model을 이용해서 전송 
-	   Map map=CommonsPagination.pageConfig(page, 12);
-	   //            => request가 포함 
-	   int curpage=(int)map.get("curpage");
-	   // map => start/end 
-	   if(fd==null)
-		   fd="감자";
-	   map.put("fd", fd);
-	   List<RecipeVO> list=service.recipeFindData(map);
-	   final int BLOCK=10;
-	   int startPage=((curpage-1)/BLOCK*BLOCK)+1;
-	   int endPage=((curpage-1)/BLOCK*BLOCK)+BLOCK;
-	   int totalpage=service.recipeFindTotalPage(map);
-	   if(endPage>totalpage)
-		   endPage=totalpage;
-	   
-	   model.addAttribute("list", list);
-	   model.addAttribute("startPage", startPage);
-	   model.addAttribute("endPage", endPage);
-	   model.addAttribute("curpage", curpage);
-	   model.addAttribute("totalpage", totalpage);
-	   model.addAttribute("fd", fd); // JSP(X) => Ajax , Vue
-	   
-	   model.addAttribute("main_jsp", "../recipe/find.jsp");
-	   return "main/main";
- * */
+
+
  
